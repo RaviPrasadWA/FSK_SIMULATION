@@ -1,0 +1,37 @@
+Frequency shift keying (FSK) 
+
+technique is used to modulate digital signals so they can be transmitted wirelessly. ex., Bluetooth uses form of FSK called gaussian FSK ( GFSK ).We will focus on binary FSK ( BFSK ), which uses two frequency values to represent a binary value of 1 and 0. The data is converted to these frequencies, transmitted, and then demodulated.
+
+
+	     _____  	   _______________	    _______________	    ________	     ________
+	    |	  |	  |		  |	   |		   |       |	    |	    |	     |	    
+INPUT ----> | VCO | ----> | noisy channel | -----> | diffrentiator | ----> | filter | ----> | slicer | ----> MODULATED 
+	    |_____|	  |_______________|	   |_______________|	   |________|	    |________|		OUT
+
+
+
+Since we dealing with BFSK ( Binary ) input could be represented as 0 and 1:
+				
+				y(t) = +F_dev	( => 0 )
+				y(t) = -F_dev	( => 1 )
+
+				F-dev = Frequency deviation. ie., difference w.r.t Carrier
+
+Modelling the VCO , it bears two frequencies:
+				
+				F_carrier + F_dev
+				F_carrier - F_dev
+
+VCO could be modelled via :
+				z = Acos( 2 * pi * ( F_carrier + y(t) ) * t )
+
+				z => transmitted signal
+				A => Amplitude of transmitted signal
+
+Noisy channel ,transmitting over air will induce a noise factor modelled by:
+				
+				z = Acos( 2 * pi * ( F_carrier + y(t) ) * t ) + n(t)
+
+				n(t) => noise momdel
+
+		
