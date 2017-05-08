@@ -39,15 +39,15 @@ Noisy channel ,transmitting over air will induce a noise factor modelled by:
 
 Differentiator separates the data signal from the carrier frequency:
 					
-		dz                                  d y(t)						   dn(t)
-		-- = -A * 2 * pi * ( f + y(t) + t * ------ ) * sin ( 2 * pi * ( f_carrier + y(t) ) * t ) * -----
-		dt				      dt						    dt
+		dz                                     d y(t)					      dn(t)
+		-- = -A*2*pi* ( f_carrier + y(t) + t * ------ )*sin*(2*pi*( f_carrier + y(t) ) * t )* -----
+		dt				         dt						dt
 		
 		  	   	    dy(t)			
 dropping phase shift, term -> ( t * ----- ) is 0 due to constant shift in frequeny:
 		   	             dt
 
 		dz                                 					      dn(t)
-		-- = -A * 2 * pi * ( f + y(t) ) * sin ( 2 * pi * ( f_carrier + y(t) ) * t ) * -----
+		-- = -A * 2 * pi * ( f_carrier + y(t) ) * sin ( 2 * pi * ( f_carrier + y(t) ) * t ) * -----
 		dt										dt
 		
