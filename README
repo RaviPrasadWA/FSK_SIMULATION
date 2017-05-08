@@ -6,10 +6,10 @@ We will focus on binary FSK ( BFSK ), which uses two frequency values to represe
 The data is converted to these frequencies, transmitted, and then demodulated.
 
 
-	  _____     _______________     _____________	  ________      ________
-	 |     |   |       	   |   |	     |	 |        |    |        |
-INPUT -->| VCO |-->| noisy channel |-->|diffrentiator|-->| filter |--> | slicer | ----> MODULATED 
-	 |_____|   |_______________|   |_____________|	 |________|    |________|          OUT
+	  _____     _______________     _____________	  ________     ________
+	 |     |   |       	   |   |	     |	 |        |   |        |
+INPUT -->| VCO |-->| noisy channel |-->|diffrentiator|-->| filter |-->| slicer |--> MODULATED 
+	 |_____|   |_______________|   |_____________|	 |________|   |________|       OUT
 
 
 
