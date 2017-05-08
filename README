@@ -47,7 +47,7 @@ Differentiator separates the data signal from the carrier frequency:
 dropping phase shift, term -> ( t * ----- ) is 0 due to constant shift in frequeny:
 		   	             dt
 
-		dz                                 					      dn(t)
-		-- = -A * 2 * pi * ( f_carrier + y(t) ) * sin ( 2 * pi * ( f_carrier + y(t) ) * t ) * -----
-		dt										dt
+		dz                                 				     dn(t)
+		-- = -A*2*pi*( f_carrier + y(t) )*sin*(2*pi*( f_carrier + y(t) )*t)* -----
+		dt								      dt
 		
