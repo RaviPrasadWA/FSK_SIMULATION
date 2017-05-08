@@ -1,6 +1,9 @@
 Frequency shift keying (FSK) 
 
-technique is used to modulate digital signals so they can be transmitted wirelessly. ex., Bluetooth uses form of FSK called gaussian FSK ( GFSK ).We will focus on binary FSK ( BFSK ), which uses two frequency values to represent a binary value of 1 and 0. The data is converted to these frequencies, transmitted, and then demodulated.
+technique is used to modulate digital signals so they can be transmitted wirelessly. 
+ex., Bluetooth uses form of FSK called gaussian FSK ( GFSK ).
+We will focus on binary FSK ( BFSK ), which uses two frequency values to represent a binary value of 1 and 0. 
+The data is converted to these frequencies, transmitted, and then demodulated.
 
 
 	     _____  	   _______________	    _______________	    ________	     ________
