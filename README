@@ -1,4 +1,4 @@
-Frequency shift keying (FSK) 
+					Frequency shift keying (FSK) 
 
 technique is used to modulate digital signals so they can be transmitted wirelessly. 
 ex., Bluetooth uses form of FSK called gaussian FSK ( GFSK ).
@@ -51,3 +51,16 @@ dropping phase shift, term -> ( t * ----- ) is 0 due to constant shift in freque
 		-- = -A*2*pi*( f_carrier + y(t) )*sin*(2*pi*( f_carrier + y(t) )*t)* -----
 		dt								      dt
 		
+Detector + Filter helps to separate the high frequency carrier from the low frequency digital data modulated onto the amplitude.
+
+						       dn(t)
+		z_filtered = A( f_carrier + y(t) ) +  -------
+							dt
+
+		filter type : LPF ( only digital data out )
+
+Data slicer eliminates DC offset noise ( some of it ) that will cause problems with a digital signal being read properly, noise term is left because the slicer cannot remove all of the noise, and if the noise is large enough relative to the signal (SNR), the signal will become useless.
+		
+				   dn(t)
+		z_slicer = y(t) + -------
+				    dt
