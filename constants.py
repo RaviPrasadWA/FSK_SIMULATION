@@ -6,3 +6,5 @@ AMPLITUDE = 1
 F_SAMPLING = 10000 # 10Khz
 AMPLITUDE_NOISE = 0.1
 F_SAMPLING = 10000 # Sampling frequency 10Khz
+N_PRINTBITS = 10
+A = 1           #transmitted signal amplitude
