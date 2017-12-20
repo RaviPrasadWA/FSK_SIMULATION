@@ -14,7 +14,7 @@ def plot(signal,m):
 
     w = np.hanning(len(signal))
     y_f = np.fft.fft(np.multiply(signal,w))
-    y_f = 10*np.log10(np.abs(y_f[0:N_FFT/2]/N_FFT))
+    y_f = 10*np.log10(np.abs(y_f[0:int(N_FFT/2)]/N_FFT))
     t = np.arange(0,float(N)/float(BITRATE),1/float(F_SAMPLING), dtype=np.float)
     pl.subplot(3,1,1)
     pl.plot(t[0:F_SAMPLING*N_PRINTBITS/BITRATE],m[0:F_SAMPLING*N_PRINTBITS/BITRATE])
@@ -29,7 +29,7 @@ def plot(signal,m):
     pl.title('Amplitude of carrier versus time')
     pl.grid(True)
     pl.subplot(3,1,3)
-    pl.plot(f[0:(F_CARRIER+DEVIATION*2)*N_FFT/F_SAMPLING],y_f[0:(F_CARRIER+DEVIATION*2)*N_FFT/F_SAMPLING])
+    pl.plot(f[0:int((F_CARRIER+DEVIATION*2)*N_FFT/F_SAMPLING)],y_f[0:int((F_CARRIER+DEVIATION*2)*N_FFT/F_SAMPLING)])
     pl.xlabel('Frequency (Hz)')
     pl.ylabel('Amplitude (dB)')
     pl.title('Spectrum')

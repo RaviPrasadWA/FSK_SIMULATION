@@ -7,5 +7,5 @@ from slicer import slicer
 input_,m = oscillator(unmodulated_input)
 input_ = differentiator(input_)
 input_ = slicer(input_,unmodulated_input)
-input_,m = oscillator(input_)
-plot(input_,m)
+input_rx,m = oscillator(input_)
+plot(input_rx,m)
